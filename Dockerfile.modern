@@ -1,0 +1,13 @@
+# Modern inference API image (untested template - build and smoke-test it before relying on it).
+FROM python:3.12-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements-modern.txt requirements-serving.txt ./
+RUN pip install --no-cache-dir -r requirements-modern.txt -r requirements-serving.txt
+COPY modern ./modern
+RUN useradd --create-home appuser && chown -R appuser /app
+USER appuser
+EXPOSE 8000
+# Mount a model at /app/artifacts/model.keras (or set MODEL_PATH). Add authentication and TLS
+# in front of this service before exposing it beyond localhost.
+CMD ["uvicorn", "modern.api:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,6 @@
+# Modern optional environment for the companion lesson (Python 3.11/3.12).
+# TensorFlow 2.21 requires Python >=3.10; use a supported platform/wheel.
+tensorflow==2.21.0
+keras>=3.0,<4
+jupyterlab>=4.0
+matplotlib>=3.8

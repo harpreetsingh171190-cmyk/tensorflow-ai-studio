@@ -1,0 +1,8 @@
+# Optional computer-vision dashboard dependencies; install after requirements-modern.txt
+streamlit>=1.40,<2
+pillow>=10.0
+psutil>=5.9
+pandas>=2.1,<4
+numpy>=1.26,<3
+# TensorFlow is pinned in requirements-modern.txt; use a compatible Python/platform wheel.
+scikit-learn>=1.4,<2

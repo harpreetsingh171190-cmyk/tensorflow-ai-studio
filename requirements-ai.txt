@@ -1,0 +1,5 @@
+# Optional AI/NLP/deployment/dashboard add-ons; install after choosing compatible Python.
+-r requirements-serving.txt
+streamlit>=1.40,<2
+pandas>=2.1,<4
+numpy>=1.26,<3

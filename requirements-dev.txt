@@ -1,0 +1,7 @@
+# Lightweight test dependencies: everything in tests/ runs without TensorFlow.
+pytest>=8
+numpy>=1.26,<3
+pandas>=2.1,<4
+pillow>=10.0
+scikit-learn>=1.4,<2
+psutil>=5.9

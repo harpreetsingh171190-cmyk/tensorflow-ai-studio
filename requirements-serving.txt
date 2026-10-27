@@ -1,0 +1,4 @@
+# Optional local inference API; install alongside requirements-modern.txt
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30,<1
+pillow>=10.0
